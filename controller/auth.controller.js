@@ -37,6 +37,7 @@ const signup = async (req, res) => {
 
 const login = async (req, res) => {
   try {
+    console.log("came in")
     const { email, password } = req.body;
     const userArr = await User.aggregate([{ $match: { email: email } }]);
 
